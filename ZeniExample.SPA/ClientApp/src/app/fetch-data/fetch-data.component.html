@@ -1,0 +1,22 @@
+<h1>Departments</h1>
+
+<p *ngIf="!Departments"><em>Loading...</em></p>
+
+<table class='table' *ngIf="Departments">
+  <thead>
+    <tr>
+      <th>Department ID</th>
+      <th>Name</th>
+      <th>Group Name</th>
+      <th>Last Modified</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let department of Departments">
+      <td>{{ department.DepartmentID }}</td>
+      <td>{{ department.Name }}</td>
+      <td>{{ department.GroupName}}</td>
+      <td>{{ department.ModifiedDate }}</td>
+    </tr>
+  </tbody>
+</table>
